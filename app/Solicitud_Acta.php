@@ -1,0 +1,19 @@
+<?php
+
+namespace sistemaCuriaDiocesana;
+
+use Illuminate\Database\Eloquent\Model;
+
+
+class Solicitud_Acta extends Model
+{
+    
+    protected $table = 'Solicitud_Acta';
+    
+    protected $primaryKey = 'IDSolicitud';
+    
+    protected $fillable = array('IDActa', 'Descripcion');
+    
+    public $timestamps = false;
+    
+}

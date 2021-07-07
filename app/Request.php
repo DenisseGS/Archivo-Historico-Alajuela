@@ -1,0 +1,18 @@
+<?php
+
+namespace sistemaCuriaDiocesana;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Request extends Model
+{
+    
+    protected $table = 'Solicitud';
+    
+    protected $primaryKey = 'IDSolicitud';
+    
+    protected $fillable = array('IDPersona', 'IDTipo_Solicitud', 'IDEstado_Solicitud');
+    
+    public $timestamps = false;
+    
+}
