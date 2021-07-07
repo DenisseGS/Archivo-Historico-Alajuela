@@ -113,7 +113,7 @@
                          <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label for="email" class="col-md-4 control-label">Correo electrónico</label>
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email" value="{{ $usuario->email }}" autofocus>
+                                    <input id="email" type="email" class="form-control" name="email" value="{{ $usuario->Email }}" autofocus>
                                     @if ($errors->has('email'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('email') }}</strong>
