@@ -68,7 +68,7 @@
                     <td>{{$usuario->Nombre}}</td>
                     <td>{{$usuario->PrimerApellido}}</td>
                     <td>{{$usuario->SegundoApellido}}</td>
-                    <td>{{$usuario->email}}</td>
+                    <td>{{$usuario->Email}}</td>
                     <td><a href="{{route('/EditarUsuario', $usuario->IDUser)}}"><i class='material-icons'>mode_edit</i></a></td>
                     <td><a href="{{route('/EliminarUsuario', $usuario->IDUser)}}"><i class='material-icons'>delete</i></a></td>
                 </tbody>
