@@ -281,7 +281,7 @@ class Dompdf
             $this->setOptions(new Options());
         }
 
-        $versionFile = realpath(__DIR__ . '/../VERSION');
+        $versionFile = (__DIR__ . '/../VERSION');
         if (file_exists($versionFile) && ($version = file_get_contents($versionFile)) !== false && $version !== '$Format:<%h>$') {
           $this->version = sprintf('dompdf %s', $version);
         }
@@ -359,9 +359,9 @@ class Dompdf
         }
 
         if ($protocol == "" || $protocol === "file://") {
-            $realfile = realpath($file);
+            $realfile = ($file);
 
-            $chroot = realpath($this->options->getChroot());
+            $chroot = ($this->options->getChroot());
             if ($chroot && strpos($realfile, $chroot) !== 0) {
                 throw new Exception("Permission denied on $file. The file could not be found under the directory specified by Options::chroot.");
             }
