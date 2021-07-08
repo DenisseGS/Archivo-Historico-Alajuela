@@ -1,11 +1,8 @@
-
 <!DOCTYPE html>
-<html>
-    
+<html>    
     <head>
         <title>Certificado Sacramentos Recibidos <title>
-            <link rel="stylesheet" href="css/pdf.css" type="text/css" />
-        
+            <link rel="stylesheet" href="css/pdf.css" type="text/css" />  
     </head>
     <body>
         <div class = "divimagdioce">
@@ -17,17 +14,11 @@
         <div class = "divimagcuria"> 
         <img src="style/img/curia3.PNG"></img>
         </div>
-        
-        
         <div class="container">
         <div class ="divParrafo">
         <p>El suscrito Pbro.Sixto Edo. Varela Santamaría, Canciller de la Curia Diocesana de Alajuela; <br/>
         Certifica que en los libros sacramentales custodiados en el Archivo Histórico se encuentra la siguiente información:</p>
         </div>
-        
-                    
-        
-      
         <div class= "Divpersona" style="border-bottom: 2px solid;">
         <label for="idParroqui"><b> En la Parroquia de: </b>   {{ Auth::user()->parroquia->NombreParroquia }}</label>  <br/>
         <label for="persona"><b>Se encuentra la información de: </b>{{  $personaNom}} {{    $personaAp1 }} {{  $personaAp2 }}</label>   <br/>
@@ -40,11 +31,9 @@
         <label for="de"> <b>de: </b>{{  $personamadre }} {{    $personaPadre}}</label>  <br/>
         <label for="Nacido"> <b>Nacido en: </b> {{ $nacidolugar }}  </label> <br/>
         <label for="día"><b>El día: </b> {{ $fechaNacEdit }}  </label><br/>
-       
         </div>
         @if($lugarBautizado != null )
         <div class="DivBautizo" style="border-bottom: 2px solid;">
-             
             <label for="BAUTIZADO"><b>BAUTIZADO EN: </b>  {{ $lugarBautizado }}</label> <br/>
              <label for="díaB"><b>El día: </b> {{ $fechaBau}}</label><br/>
             <label for="Padrinos"><b>Padrinos: </b> {{  $nombreMadrinaB }} {{  $nombrePadrinoB}} </label> <br/>
@@ -53,11 +42,8 @@
            @else
                     <div class="Nobautizo">
                   <label for="BAUTIZADO"><b>BAUTIZADO EN: </b>  No cuenta con esta acta</label> <br/>
-                        
                     </div>
-                    
                 @endif
-        
          @if($lugarConfirma != null )
         <div class = "DivConfirma" style="border-bottom: 2px solid;">
             <label><b>CONFIRMADO EN: </b>{{  $lugarConfirma}}</label><br/>
@@ -69,9 +55,7 @@
                 <div class="Noconfirma">
                   <label><b>CONFIRMADO EN: </b>  No cuenta con esta acta</label> <br/>
                 </div>
-                    
                 @endif
-                
         @if($lugarMatrimonio != null )  
         <div class= "DivMatrimonio" style="border-bottom: 2px solid;">
             <label><b>MATRIMONIO EN: </b>{{ $lugarMatrimonio}}</label> <br/>
@@ -83,9 +67,7 @@
                 <div class="NoMatrimonio">
                  <label><b>MATRIMONIO EN: </b> No cuenta con esta acta</label> <br/>
                 </div>
-                    
          @endif
-        
         @if($lugarDefuncion != null ) 
         <div class= "divdefun" style="border-bottom: 2px solid;" >
             <label for="DEFUNCION"><b>DEFUNCIÓN EN: </b>  {{  $lugarDefuncion}}</label> <br/>
@@ -96,28 +78,17 @@
          @else
                 <div class="NoDefuncion">
                <label for="DEFUNCION"><b>DEFUNCIÓN EN: </b> No cuenta con esta acta</label> <br/>
-                </div>
-                    
+                </div>     
          @endif
          @if($notasMarginalesEdit != null ) 
         <div class="divNotas" >
             <label for="notasMarginales"><b>Notas Marginales: </b>  {{ $notasMarginalesEdit}}</label><br/>
-            
         </div>
           @else
                 <div class="NoNotas">
                <label for="notasMarginales"><b>Notas Marginales: </b> No cuenta con ninguna nota</label> <br/>
-                </div>
-                    
+                </div>     
          @endif
-        
        </div>
     </body>
 </html>
-        
-     
-      
-
-      
-      
-      
