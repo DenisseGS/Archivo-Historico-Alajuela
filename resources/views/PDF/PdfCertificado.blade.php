@@ -92,7 +92,7 @@
             <label for="díaD"><b>El día: </b> {{  $fechaDefuncion}}</label><br/>
             <label><b>A causa de: </b> {{  $causaDefuncion}}</label><br/>
             <label><b>Esta Información consta en el Libro: </b> {{ $numLibroD}}</label> <label>   <b>Folio: </b> {{  $numFolioD}}</label> <label>   <b>Asiento: </b>{{ $numAsientoD}}</label><br/>
-        </div
+        </div>
          @else
                 <div class="NoDefuncion">
                <label for="DEFUNCION"><b>DEFUNCIÓN EN: </b> No cuenta con esta acta</label> <br/>
