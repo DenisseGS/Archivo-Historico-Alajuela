@@ -101,7 +101,7 @@ trait ResetsPasswords
     protected function resetPassword($user, $password)
     {
         $user->forceFill([
-            'Contrasenna' => bcrypt($password),
+            'password' => bcrypt($password),
             'remember_token' => Str::random(60),
         ])->save();
 

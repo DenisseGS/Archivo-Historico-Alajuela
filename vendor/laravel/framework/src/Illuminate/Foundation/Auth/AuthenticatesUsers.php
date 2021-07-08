@@ -155,11 +155,9 @@ trait AuthenticatesUsers
     {
         $this->guard()->logout();
 
-        $request->session()->flush();
+        $request->session()->invalidate();
 
-        $request->session()->regenerate();
-
-        return redirect('/login');
+        return redirect('/');
     }
 
     /**
