@@ -1658,7 +1658,8 @@ class Stylesheet
      */
     public static function getDefaultStylesheet()
     {
-        $dir = realpath(__DIR__ . "/../..");
+        //$dir = realpath(__DIR__ . "/../..");
+        $dir = realpath(__DIR__ . "/..");
         return $dir . self::DEFAULT_STYLESHEET;
     }
 
